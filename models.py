@@ -26,5 +26,19 @@ class ToDoList:
         else:
             return
         
-    def display_list(self):
-        pass
+    def print_list(self):
+        '''Displays the list to the user.'''
+        # Print top header
+        print("To-Do List\------------------------")
+        # Print finished list
+        for item in self.finished:
+            print('\U2022' + item)
+        # Print todo list
+        for item in self.todo:
+            print('\U2022' + item)
+        # Print user commands
+        print("add (item) to add.\
+              finish (item) to check off list.\
+              remove (item) to delete item.")
+
+        
