@@ -25,3 +25,6 @@ class ToDoList:
             self.finished.remove(item)
         else:
             return
+        
+    def display_list(self):
+        pass
