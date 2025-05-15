@@ -1,5 +1,7 @@
 # Contains functions and helper functions.
 
+import os # for clearing the console
+
 class ToDoList:
     '''Creates a new to-do list object.'''
 
@@ -28,17 +30,22 @@ class ToDoList:
         
     def print_list(self):
         '''Displays the list to the user.'''
+        # Clear the console
+        self.clear_console()
         # Print top header
         print("To-Do List\n------------------------")
         # Print finished list
         for item in self.finished:
-            print('\u2022' + item + " " + '\u2713')
+            print('\u2713' + " " + item)
         # Print todo list
         for item in self.todo:
-            print('\u2022' + item + " " + '\u2610')
+            print('\u2610' + " " + item)
         # Print user commands
-        print("add 'item' to add.\n"
+        print("\n\nadd 'item' to add.\n"
               "finish 'item' to check off list.\n"
               "remove 'item' to delete item.")
-
+        
+    def clear_console(self):
+        '''Clears the console.'''
+        os.system('cls' if os.name == 'nt' else 'clear') 
         
