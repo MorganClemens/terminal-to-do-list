@@ -15,13 +15,15 @@ class App():
         # Parse user input
         user_input_split = user_input.split()
         user_command = user_input_split[0]
-        self.working_item  = user_input_split[-1] # store the user item as current working item
+
+        for word in user_input_split[1:]:
+            self.working_item += (word + " ") # assemble and store item as working item
 
         # Handle invalid input
         valid_commands = ["add", "finish", "delete", "quit"]
-        if len(user_input_split) > 2 or user_command.lower() not in valid_commands:
+        if user_command.lower() not in valid_commands:
             # invalid if too many arguments or unrecognized command
-            print("Invalid command.")
+            self.error_codes.append("Invalid command.")
 
         # Read command
 
@@ -51,3 +53,5 @@ class App():
                 quit() # quits the session - will need to verify this works later
             case -1:
                 self.error_codes.append("Command error.") # Append error code
+
+        self.working_item = "" # Clear the working item

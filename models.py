@@ -44,7 +44,7 @@ class ToDoList:
         print("\n\nadd 'item' to add.\n"
               "finish 'item' to check off list.\n"
               "remove 'item' to delete item.\n"
-              "'quit' to quit.")
+              "'quit' to quit.\n")
         
     def clear_console(self):
         '''Clears the console.'''

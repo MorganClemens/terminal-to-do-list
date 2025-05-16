@@ -7,7 +7,10 @@ def main():
     while True:
         try:
             current_session.toDoList.print_list() # display current list state
+            for code in current_session.error_codes: print(code) # print error codes
+            current_session.error_codes.clear() # clear codes for next loop
             command_index = current_session.read_input() # get user command
+
             current_session.execute_command(command_index) # perform user command
 
         except ValueError as e:
