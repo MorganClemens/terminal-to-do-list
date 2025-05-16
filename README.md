@@ -63,3 +63,7 @@ remove 'item' to delete item.
 
 Enter command:
 ```
+
+## Video Overview
+
+[YouTube](https://youtu.be/YHHExrunoFU)
