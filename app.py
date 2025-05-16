@@ -1,20 +1,42 @@
-# app.py
+# Contains app logic for user interaction within the terminal interface
 import models
 
-def main():
-    # Build new todolist object
-    new_list = models.ToDoList()
+class App():
+    '''Will utilize ToDoList class to define user interactions.'''
 
-    # For Testing
-    new_list.add_item("Build resin holder")
-    new_list.add_item("Go surfing")
-    new_list.add_item("Pack lunch for later")
+    def __init__(self):
+        self.toDoList = models.ToDoList() # create new to do list object
 
-    new_list.print_list()
+    def read_input(self):
+        '''Prompts and parses user input. Returns int corresponding to command.'''
+        user_input = input("Enter command: ")
+        # Parse user input
+        user_input_split = user_input.split()
+        user_command = user_input_split[0]
+        user_item  = user_input_split[-1]
 
-    new_list.finish_item("Build resin holder")
+        # Handle invalid input
+        valid_commands = ["add", "finish", "delete", "quit"]
+        if len(user_input_split) > 2 or user_command.lower() not in valid_commands:
+            # invalid if too many arguments or unrecognized command
+            print("Invalid command.")
 
-    new_list.print_list()
+        # Read command
 
-if __name__ == "__main__":
-    main()
+        match user_command:
+            case "add":
+                return 0
+            case "finish":
+                return 1
+            case "delete":
+                return 2
+            case "quit":
+                return 3
+            case _:
+                return -1
+
+
+
+
+
+    
