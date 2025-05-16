@@ -7,6 +7,7 @@ class App():
     def __init__(self):
         self.toDoList = models.ToDoList() # create new to do list object
         self.working_item = "" # stores the current working item
+        self.error_codes = [] # stores any error codes
 
     def read_input(self):
         '''Prompts and parses user input. Returns int corresponding to command.'''
@@ -48,7 +49,9 @@ class App():
             case 3:
                 quit() # quits the session - will need to verify this works later
             case -1:
-                print("Unknown error.")
+                self.error_codes.append("Command error.") # Append error code
+
+    
 
             
 
