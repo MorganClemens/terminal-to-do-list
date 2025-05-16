@@ -20,7 +20,7 @@ class App():
             self.working_item += (word + " ") # assemble and store item as working item
 
         # Handle invalid input
-        valid_commands = ["add", "finish", "delete", "quit"]
+        valid_commands = ["add", "finish", "remove", "quit"]
         if user_command.lower() not in valid_commands:
             # invalid if too many arguments or unrecognized command
             self.error_codes.append("Invalid command.")
@@ -32,7 +32,7 @@ class App():
                 return 0
             case "finish":
                 return 1
-            case "delete":
+            case "remove":
                 return 2
             case "quit":
                 return 3
