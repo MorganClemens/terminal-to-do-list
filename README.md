@@ -1,6 +1,6 @@
 # Terminal To-Do List App
 
-This is a simple command-line To-Do List application written in Python. It allows users to add, complete, and remove tasks using a clean and intuitive terminal interface. The project is structured to promote modularity and clarity, making it a great starting point for beginners learning Python, object-oriented programming, and command-line interaction.
+This is a simple command-line To-Do List application written in Python. It allows users to add, complete, and remove tasks using a clean and intuitive terminal interface.
 
 ## Features
 
