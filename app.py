@@ -47,18 +47,7 @@ class App():
             case 2:
                 self.toDoList.remove_item(self.working_item) # delete current working item from to-do list
             case 3:
+                print("Quitting...")
                 quit() # quits the session - will need to verify this works later
             case -1:
                 self.error_codes.append("Command error.") # Append error code
-
-    
-
-            
-
-        
-
-
-
-
-
-    
